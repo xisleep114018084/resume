@@ -6,72 +6,37 @@
 <title>歐佳穎｜個人履歷</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
+    margin: 0;
     font-family: "Segoe UI", sans-serif;
     background: linear-gradient(135deg, #1e1e2f, #3a3a6a);
     color: white;
-    overflow-x: hidden;
 }
 
-/* 背景光暈 */
-body::before {
-    content: "";
-    position: fixed;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, #7f5af0, transparent);
-    top: -200px;
-    left: -200px;
-    filter: blur(120px);
-}
-
-/* 主卡片 */
 .container {
     max-width: 900px;
-    margin: 50px auto;
-    backdrop-filter: blur(15px);
+    margin: 40px auto;
     background: rgba(255,255,255,0.08);
-    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
     padding: 30px;
-    box-shadow: 0 0 40px rgba(0,0,0,0.4);
-    animation: fadeUp 1s ease;
 }
 
-/* 頭像 */
 .profile {
     text-align: center;
 }
 
 .profile img {
-    width: 150px;
-    height: 150px;
+    width: 140px;
     border-radius: 50%;
-    border: 4px solid white;
-    object-fit: cover;
-    transition: 0.3s;
-}
-
-.profile img:hover {
-    transform: scale(1.1);
 }
 
 .name {
-    font-size: 32px;
-    margin-top: 15px;
+    font-size: 30px;
     font-weight: bold;
+    margin-top: 10px;
 }
 
-.subtitle {
-    opacity: 0.8;
-}
-
-/* 區塊 */
 .section {
     margin-top: 30px;
 }
@@ -79,29 +44,29 @@ body::before {
 .section h2 {
     border-left: 5px solid #7f5af0;
     padding-left: 10px;
-    margin-bottom: 15px;
 }
 
-/* 技能條 */
-.skill {
-    margin: 10px 0;
-}
-
-.bar {
-    height: 8px;
-    background: rgba(255,255,255,0.2);
+.card {
+    margin-top: 10px;
+    padding: 15px;
+    background: rgba(255,255,255,0.05);
     border-radius: 10px;
-    overflow: hidden;
+}
+
+.skill-bar {
+    background: rgba(255,255,255,0.2);
+    height: 8px;
+    border-radius: 10px;
+    margin-top: 5px;
 }
 
 .fill {
     height: 100%;
     width: 0;
-    background: linear-gradient(90deg, #7f5af0, #00c6ff);
-    transition: 1.5s;
+    background: linear-gradient(90deg,#7f5af0,#00c6ff);
+    border-radius: 10px;
 }
 
-/* 音樂按鈕 */
 .music-btn {
     position: fixed;
     bottom: 20px;
@@ -112,14 +77,6 @@ body::before {
     padding: 15px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 18px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-}
-
-/* 動畫 */
-@keyframes fadeUp {
-    from {opacity: 0; transform: translateY(30px);}
-    to {opacity: 1; transform: translateY(0);}
 }
 </style>
 </head>
@@ -128,80 +85,117 @@ body::before {
 
 <div class="container">
 
-    <div class="profile">
-        <img src="profile.webp">
-        <div class="name">歐佳穎</div>
-        <div class="subtitle">亞洲大學 學生</div>
-    </div>
+<div class="profile">
+    <img src="profile.webp" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'">
+    <div class="name">歐佳穎</div>
+    <div>亞洲大學｜學生</div>
+</div>
 
-    <div class="section">
-        <h2>基本資料</h2>
-        學號：AU114018184<br>
-        Email：xia@gmail.com<br>
-        電話：09xx-xxx-xxx
-    </div>
+<div class="section">
+<h2>基本資料</h2>
+<div class="card">
+學號：AU114018184<br>
+Email：your@email.com<br>
+電話：09xx-xxx-xxx<br>
+專長領域：前端開發 / UI設計 / 數位內容
+</div>
+</div>
 
-    <div class="section">
-        <h2>自我介紹</h2>
-        我是一名對設計與科技充滿熱情的學生，擅長將創意與技術結合，
-        持續精進前端開發與專案實作能力，具備良好的團隊合作與溝通能力。
-    </div>
+<div class="section">
+<h2>自我介紹</h2>
+<div class="card">
+我是一位積極進取且具備學習熱忱的學生，專注於前端開發與使用者介面設計。  
+在學期間透過專題與實作累積經驗，能夠獨立完成網頁開發並優化使用者體驗。  
 
-    <div class="section">
-        <h2>技能</h2>
+我擅長將創意轉化為實際作品，並具備良好的團隊合作與溝通能力，
+未來希望能在科技與設計領域持續發展。
+</div>
+</div>
 
-        <div class="skill">
-            HTML
-            <div class="bar"><div class="fill" data="90%"></div></div>
-        </div>
+<div class="section">
+<h2>專業技能</h2>
 
-        <div class="skill">
-            CSS
-            <div class="bar"><div class="fill" data="85%"></div></div>
-        </div>
+<div class="card">
+HTML
+<div class="skill-bar"><div class="fill" data="90%"></div></div>
+</div>
 
-        <div class="skill">
-            JavaScript
-            <div class="bar"><div class="fill" data="75%"></div></div>
-        </div>
+<div class="card">
+CSS / UI設計
+<div class="skill-bar"><div class="fill" data="85%"></div></div>
+</div>
 
-    </div>
+<div class="card">
+JavaScript
+<div class="skill-bar"><div class="fill" data="75%"></div></div>
+</div>
 
-    <div class="section">
-        <h2>經歷</h2>
-        ・校內專題開發<br>
-        ・活動企劃與執行<br>
-        ・團隊專案合作
-    </div>
+<div class="card">
+Git / 專案管理
+<div class="skill-bar"><div class="fill" data="70%"></div></div>
+</div>
 
 </div>
 
-<!-- 音樂 -->
+<div class="section">
+<h2>專題與作品</h2>
+
+<div class="card">
+🔹 個人履歷網站<br>
+使用 HTML / CSS / JavaScript 製作互動式履歷，具備動畫與響應式設計
+</div>
+
+<div class="card">
+🔹 校內專題系統開發<br>
+負責前端介面設計與功能實作，提升使用者操作體驗
+</div>
+
+</div>
+
+<div class="section">
+<h2>經歷與活動</h2>
+
+<div class="card">
+・參與校內專題製作<br>
+・活動企劃與執行經驗<br>
+・團隊合作開發專案
+</div>
+
+</div>
+
+<div class="section">
+<h2>未來目標</h2>
+<div class="card">
+希望成為一名具備設計與技術整合能力的前端工程師，  
+持續精進程式能力，並打造優秀的使用者體驗產品。
+</div>
+</div>
+
+</div>
+
 <audio id="music" loop>
-    <source src="music.mp3" type="audio/mpeg">
+<source src="music.mp3">
 </audio>
 
 <button class="music-btn" onclick="toggleMusic()">🎵</button>
 
 <script>
-// 技能動畫
-window.addEventListener("load", () => {
-    document.querySelectorAll(".fill").forEach(el => {
+window.onload = () => {
+    document.querySelectorAll(".fill").forEach(el=>{
         el.style.width = el.getAttribute("data");
     });
-});
+};
 
-// 音樂控制（修正 AbortError）
-let playing = false;
-const music = document.getElementById("music");
+let playing=false;
+const music=document.getElementById("music");
 
-function toggleMusic() {
-    if (!playing) {
-        music.play().catch(err => console.log(err));
-        playing = true;
-    } else {
+function toggleMusic(){
+    if(!playing){
+        music.play();
+        playing=true;
+    }else{
         music.pause();
-        playing = false;
+        playing=false;
     }
 }
 </script>
